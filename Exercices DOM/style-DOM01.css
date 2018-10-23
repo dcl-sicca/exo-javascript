@@ -1,0 +1,12 @@
+#rose {
+    width: 250px;
+    height: 250px;
+    background-color: deeppink;
+    -webkit-transition: all 500ms cubic-bezier(0.795, 0.195, 0.870, 1);
+    /* older webkit */
+    -webkit-transition: all 500ms cubic-bezier(0.795, 0.195, 0.870, 1.440);
+    -moz-transition: all 500ms cubic-bezier(0.795, 0.195, 0.870, 1.440);
+    -o-transition: all 500ms cubic-bezier(0.795, 0.195, 0.870, 1.440);
+    transition: all 500ms cubic-bezier(0.795, 0.195, 0.870, 1.440);
+    /* custom */
+}
