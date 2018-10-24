@@ -39,43 +39,43 @@ console.log("Shifumi Joueur = ", chifumiJoueur);
 
 // --- Si Ordi = parpaing et Joueur = pargaing Alors Match nul - Ordi 0 0 Joueur
 if ((chifumiOrdi == "parpaing") && (chifumiJoueur == "parpaing")) {
-    victoire = ("Match-nul");
+    victoire = (0);
 }
 // --- Si Ordi = feuille et Joueur = feuille Alors Match nul - Ordi 0 0 Joueur
 else if ((chifumiOrdi == "feuille") && (chifumiJoueur == "feuille")) {
-    victoire = ("Match-nul");
+    victoire = (0);
 }
 // --- Si Ordi = tronconneuse et Joueur = tronconneuse Alors Match nul - Ordi 0 0 Joueur
 else if ((chifumiOrdi == "tronconneuse") && (chifumiJoueur == "tronconneuse")) {
-    victoire = ("Match-nul");
+    victoire = (0);
 }
 
 // Ordi Gagne
 // --- Si Ordi = parpaing et Joueur = tronconneuse Alors Ordi Gagne - Ordi 1 0 Joueur
 else if ((chifumiOrdi == "parpaing") && (chifumiJoueur == "tronconneuse")) {
-    victoire = ("Ordi-gagne");
+    victoire = (1);
 }
 // --- Si Ordi = feuille et Joueur = parpaing alors Ordi Gagne - Ordi 1 0 Joueur
 else if ((chifumiOrdi == "feuille") && (chifumiJoueur == "parpaing")) {
-    victoire = ("Ordi-gagne");
+    victoire = (1);
 }
 // --- Si Ordi = tronconneuse et Joueur = feuille Alors Ordi Gagne - Ordi 1 0 Joueur
 else if ((chifumiOrdi == "tronconneuse") && (chifumiJoueur == "feuille")) {
-    victoire = ("Ordi-gagne");
+    victoire = (1);
 }
 
 // Joueur Gagne
 // --- Si Ordi = parpaing et Joueur = feuille Alors Joueur Gagne - Ordi 0 1 Joueur
 else if ((chifumiOrdi == "parpaing") && (chifumiJoueur == "feuille")) {
-    victoire = ("Joueur-gagne");
+    victoire = (2);
 }
 // --- Si Ordi = feuille et Joueur = tronconneuse Alors Joueur Gagne - Ordi 0 1 Joueur
 else if ((chifumiOrdi == "feuille") && (chifumiJoueur == "tronconneuse")) {
-    victoire = ("Joueur-gagne");
+    victoire = (2);
 }
 // --- Si Ordi = tronconneuse et Joueur = parpaing Alors Joueur Gagne - Ordi 0 1 Joueur
 else if ((chifumiOrdi == "tronconneuse") && (chifumiJoueur == "parpaing")) {
-    victoire = ("Joueur-gagne");
+    victoire = (2);
 }
 
 
@@ -85,16 +85,18 @@ console.log(victoire)
 // Résultats
 // Match nul
 // Si Ordi=Joueur Alors Match Nul
-if (victoire == "Match-nul") {
+if (victoire == 0) {
     console.log("Match Nul ! Essai encore !")
 }
-// Ordi Perds
-// Si Ordi pas Match nul ou pas Gagné alors Perds
-else if (victoire == "Joueur-Gagne") {
-    console.log("Bravo ! Tu es un Champion !")
-}
+
 // Joueur Perds
 // Si Ordi pas Match nul ou pas Gagné alors Perds
-else if (victoire == "Ordi-Gagne") {
+else if (victoire == 1) {
     console.log("bouh ! Tu es un loser")
+}
+
+// Ordi Perds
+// Si Ordi pas Match nul ou pas Gagné alors Perds
+else if (victoire == 2) {
+    console.log("Bravo ! Tu es un Champion !")
 }
